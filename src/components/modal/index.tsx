@@ -2,6 +2,7 @@ import {ReactNode, useRef} from "react";
 import classNames from "classnames";
 import useEscListener from "../../hooks/useEscListener.ts";
 import Card from "../card";
+import {FaPlus} from 'react-icons/fa';
 
 interface commonProps {
     children: ReactNode
@@ -41,8 +42,8 @@ const ModalContainer = ({children, closeModal = () => {}, className = ""}: modal
 
     return (
         <Card ref={ref} className={cardClasses}>
-            <button onClick={closeModal} className="mt-4 absolute top-0 right-0 flex flex-col">
-                <i className="fi fi-tr-circle-xmark"></i>
+            <button onClick={closeModal} className="absolute top-0 right-0 flex flex-col rotate-45">
+                <FaPlus />
             </button>
             {children}
         </Card>

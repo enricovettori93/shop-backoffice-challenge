@@ -6,3 +6,5 @@ TODO
 - error handling
 - grafico
 - visualizzazione layout differente
+- setup e istruzioni
+- docker per deploy

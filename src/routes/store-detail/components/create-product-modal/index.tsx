@@ -66,10 +66,10 @@ const CreateProductModal = ({onCancel, onConfirm}: props) => {
                 </form>
             </Modal.Content>
             <Modal.Actions>
-                <button onClick={onCancel} className="btn--secondary">
+                <button onClick={onCancel} className="button--info">
                     Annulla
                 </button>
-                <button onClick={() => submitForm(getValues() as CreateProductBody)} className="btn--danger">
+                <button onClick={() => submitForm(getValues() as CreateProductBody)} className="button--danger">
                     Conferma
                 </button>
             </Modal.Actions>

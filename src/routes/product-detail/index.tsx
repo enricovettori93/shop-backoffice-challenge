@@ -1,12 +1,12 @@
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useMutation, useQuery} from "@tanstack/react-query";
 import productApi from "../../api/product.api.ts";
-import {useContext} from "react";
+import React, {useContext} from "react";
 import {ModalContext} from "../../context/modal.context.tsx";
 import DeleteProductModal from "./components/delete-product-modal";
 import toast from 'react-hot-toast';
 import ROUTES from "../../routes.ts";
-import {FaTrashAlt} from 'react-icons/fa';
+import {FaAngleLeft, FaTrashAlt} from 'react-icons/fa';
 
 const ProductDetail = () => {
     const {storeId, productId} = useParams();
@@ -42,11 +42,12 @@ const ProductDetail = () => {
 
     return (
         <div className="flex flex-col">
-            <div>
-                <Link to={ROUTES.STORE_DETAIL.replace(":storeId", storeId || "")}> ⬅️ Torna al dettaglio dello
-                    shop</Link>
+            <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between">
+                <h2 className="text-2xl order-last md:order-1">Dettaglio del prodotto</h2>
+                <Link to={ROUTES.STORE_DETAIL.replace(":storeId", storeId || "")} className="flex items-center md:order-2 underline">
+                    <FaAngleLeft/>&nbsp;Torna al dettaglio dello shop
+                </Link>
             </div>
-            <h2 className="text-2xl mt-10">Dettaglio del prodotto</h2>
             <button className="button--danger button-fab" onClick={showDeleteModal}>
                 <FaTrashAlt/>
             </button>

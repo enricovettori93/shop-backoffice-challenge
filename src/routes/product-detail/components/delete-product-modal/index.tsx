@@ -18,8 +18,8 @@ const DeleteProductModal = ({onCancel, onConfirm}: props) => {
                 L'azione non può essere ripristinata.
             </Modal.Content>
             <Modal.Actions>
-                <button onClick={onCancel} className="btn--secondary">Annulla</button>
-                <button onClick={onConfirm} className="btn--danger">Conferma</button>
+                <button onClick={onCancel} className="button--info">Annulla</button>
+                <button onClick={onConfirm} className="button--danger">Conferma</button>
             </Modal.Actions>
         </Modal.Container>
     );

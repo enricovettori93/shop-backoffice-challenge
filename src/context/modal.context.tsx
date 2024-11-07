@@ -43,7 +43,7 @@ const ModalContextProvider = ({children}: {children: ReactNode}) => {
     const modalClasses = classNames({
         "modal-container relative": true,
         "w-52 h-0": !modal,
-        "w-1/2 h-auto": modal
+        "w-[90%] md:w-3/4 lg:w-1/2 h-auto": modal
     });
 
     return (

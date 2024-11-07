@@ -64,8 +64,10 @@ body {
     display: flex;
     width: 100vw;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 #root {
     width: 100%;
 }
+
