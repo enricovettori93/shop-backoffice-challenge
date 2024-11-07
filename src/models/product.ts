@@ -8,8 +8,10 @@ export interface Product {
     employee: Employe
     description: string
     reviews: Review[]
+    price: number
 }
 
-export type ProductListResponse = ApiListResponse<Product[]>
+export type ProductListResponse = ApiListResponse<Product>[]
 export type ProductDetailResponse = Product
 export type CreateProductBody = Product
+

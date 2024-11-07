@@ -4,6 +4,5 @@ TODO
 - tests cypress
 - tanstack query error handling
 - error handling
-- zod validation
-- react hook form
-- tailwind
+- grafico
+- visualizzazione layout differente
