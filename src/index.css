@@ -43,9 +43,13 @@
         @apply text-ellipsis overflow-hidden whitespace-nowrap text-[11px]
     }
 
-    input {
+    input, textarea {
         @apply border-2 border-b-slate-300 border-t-0 border-r-0 border-l-0
     }
+}
+
+html {
+    overflow-x: hidden;
 }
 
 :root {

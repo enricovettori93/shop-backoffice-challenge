@@ -53,7 +53,7 @@ const CreateProductModal = ({onCancel, onConfirm}: props) => {
                     </InputWrapper>
                     <InputWrapper error={errors.description}>
                         <label htmlFor="description">Descrizione</label>
-                        <input id="description" type="text" {...register("description")}/>
+                        <textarea name="" id="" cols="1" rows="3" {...register("description")}></textarea>
                     </InputWrapper>
                     <InputWrapper error={errors.price}>
                         <label htmlFor="price">Prezzo</label>

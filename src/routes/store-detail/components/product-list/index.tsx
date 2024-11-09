@@ -1,10 +1,10 @@
 import {Product, ProductListResponse} from "../../../../models";
 import {Link, useParams} from "react-router-dom";
 import ROUTES from "../../../../routes.ts";
-import {useState} from "react";
+import React, {useState} from "react";
 import {InputWrapper} from "../../../../components/inputs";
 import classNames from "classnames";
-import Card from "../../../../components/card";
+import Card, {CardComposition} from "../../../../components/card";
 
 interface detailProps {
     id: Product["id"]
@@ -23,15 +23,18 @@ const Detail = ({id: productId, product, className}: detailProps) => {
     return (
         <Link to={ROUTES.PRODUCT_DETAIL.replace(":storeId", storeId || "").replace(":productId", productId)}>
             <Card className={cardClasses}>
-                <h3 className="text-xl font-bold">
-                    <span>{product.title}&nbsp;-&nbsp;{product.price}€</span>
-                </h3>
-                <div className="text-ellipsis overflow-hidden line-clamp-5">
-                    <span>{product.description}</span>
-                </div>
-                <div className="font-semibold mt-auto">
-                    <span>Sono presenti: {product.reviews.length} recensioni</span>
-                </div>
+                <CardComposition.Title className="font-semibold space-x-2">
+                    <span>{product!.title}</span>
+                    <span className="text-green-600">{product!.price}€</span>
+                </CardComposition.Title>
+                <CardComposition.Content>
+                    <div className="text-ellipsis overflow-hidden line-clamp-3">
+                        <span>{product.description}</span>
+                    </div>
+                    <div className="font-semibold mt-auto">
+                        <span>Sono presenti: {product.reviews.length} recensioni</span>
+                    </div>
+                </CardComposition.Content>
             </Card>
         </Link>
     )

@@ -1,6 +1,8 @@
 import React from 'react';
 import {Store} from "../../../../models";
 import classNames from "classnames";
+import Card from "../../../../components/card";
+import {FaRegUserCircle} from "react-icons/fa";
 
 interface props {
     store: Store
@@ -21,8 +23,14 @@ const StoreInfo = ({store, className = ""}: props) => {
             </div>
             <div>
                 <p className="text-xl font-semibold">Impiegati:&nbsp;</p>
-                <ul>
-                    {store.employees.map((employee) => (<li key={employee}>{employee}</li>))}
+                <ul className="flex flex-row gap-3 flex-nowrap">
+                    {store.employees.map((employee) => (
+                        <li key={employee}>
+                            <Card className="flex flex-row gap-4 items-center">
+                                <FaRegUserCircle/>{employee}
+                            </Card>
+                        </li>)
+                    )}
                 </ul>
             </div>
         </div>

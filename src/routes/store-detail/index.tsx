@@ -8,7 +8,7 @@ import ListLoader from "../../components/list-loader";
 import {useContext} from "react";
 import {ModalContext} from "../../context/modal.context.tsx";
 import CreateProductModal from "./components/create-product-modal";
-import {CreateProductBody, Store} from "../../models";
+import {CreateProductBody} from "../../models";
 import toast from "react-hot-toast";
 import ROUTES from "../../routes.ts";
 import StoreInfo from "./components/store-info";
@@ -58,18 +58,9 @@ const StoreDetail = () => {
         )
     }
 
-    if (isPendingStore) {
-        return (
-            <div>
-                Sto caricando i dettagli dello shop...
-                <ListLoader/>
-            </div>
-        );
-    }
+    if (isPendingStore) return <ListLoader/>;
 
-    if (error) {
-        return <div>Errore nel dettaglio dello shop {error.message}</div>;
-    }
+    if (error) return <div>Errore nel dettaglio dello shop {error.message}</div>;
 
     return (
         <div>
@@ -81,7 +72,7 @@ const StoreDetail = () => {
                     <FaAngleLeft/>&nbsp;Torna alla lista degli shop
                 </Link>
             </div>
-            <StoreInfo store={shopDetail as Store}/>
+            <StoreInfo store={shopDetail!}/>
             {isPendingProducts && <ListLoader/>}
             {
                 products?.length === 0 && <h2 className="text-2xl">Non sono presenti prodotti</h2>

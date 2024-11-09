@@ -2,15 +2,21 @@ import {useQuery} from "@tanstack/react-query";
 import StoreApi from "../../api/store.api.ts";
 import {Link} from "react-router-dom";
 import ROUTES from "../../routes.ts";
+import ListLoader from "../../components/list-loader";
+import Card, {CardComposition} from "../../components/card";
 
 const StoreList = () => {
-    const {data, error} = useQuery({
+    const {data, error, isLoading} = useQuery({
         queryKey: ["stores"],
         queryFn: StoreApi.getAll
     });
 
     if (error) {
-        return <div>Error {error}</div>;
+        return <div>Errore nel caricamento degli shop {error}</div>;
+    }
+
+    if (isLoading) {
+        return <ListLoader />;
     }
 
     return (
@@ -19,7 +25,13 @@ const StoreList = () => {
             <ul>
                 {data?.map((store) => (
                     <li className="mt-2" key={store.data.name}>
-                        <Link to={ROUTES.STORE_DETAIL.replace(":storeId", store.id || "")}>{store.data.name}</Link>
+                        <Link to={ROUTES.STORE_DETAIL.replace(":storeId", store.id || "")}>
+                            <Card>
+                                <CardComposition.Title>
+                                    {store.data.name}
+                                </CardComposition.Title>
+                            </Card>
+                        </Link>
                     </li>
                 ))}
             </ul>

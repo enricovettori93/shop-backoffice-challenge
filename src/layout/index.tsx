@@ -6,12 +6,12 @@ import Footer from "../components/footer";
 
 const Layout = () => {
     return (
-        <div>
+        <div className="relative">
             <Toaster/>
             <Header/>
-            <section className="mb-20 mt-10 w-full px-5">
+            <main className="py-10 w-full px-5 mb-40 bg-white relative z-40">
                 <Outlet/>
-            </section>
+            </main>
             <Footer />
         </div>
     );
