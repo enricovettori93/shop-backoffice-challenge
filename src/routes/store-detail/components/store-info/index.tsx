@@ -22,7 +22,7 @@ const StoreInfo = ({store, className = ""}: props) => {
             </div>
             <div>
                 <p className="text-xl font-semibold">Impiegati:&nbsp;</p>
-                <ul className="flex flex-row gap-3 flex-nowrap">
+                <ul className="flex flex-row gap-3 flex-wrap">
                     {store.employees.map((employee) => (
                         <li key={employee}>
                             <Card className="flex flex-row gap-4 items-center">

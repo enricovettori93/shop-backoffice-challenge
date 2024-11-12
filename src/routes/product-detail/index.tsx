@@ -38,7 +38,7 @@ const ProductDetail = () => {
         showModal(<DeleteProductModal onCancel={removeModal} onConfirm={handleDelete}/>);
     }
 
-    if (error) return <div>Errore nel dettaglio del prodotto {error.message}</div>;
+    if (error) return <div>Errore nel caricamento del dettaglio del prodotto {error.message}</div>;
 
     if (isPending) return <ListLoader/>;
 

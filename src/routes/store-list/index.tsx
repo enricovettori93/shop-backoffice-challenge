@@ -12,7 +12,7 @@ const StoreList = () => {
     });
 
     if (error) {
-        return <div>Errore nel caricamento degli shop {error?.message}</div>;
+        return <div>Errore nel caricamento degli shop {error.message}</div>;
     }
 
     if (isLoading) {

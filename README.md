@@ -2,8 +2,6 @@
 
 TODO
 - tests cypress
-- tanstack query error handling
-- error handling
 
 ## Stack tecnologico
 - React

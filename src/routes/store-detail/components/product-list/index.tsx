@@ -51,7 +51,7 @@ const ProductList = ({className = "", products}: listProps) => {
     const [view, setView] = useState<view>("list");
 
     const ulClasses = classNames({
-        "grid grid-cols-4 gap-3": view === "grid",
+        "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3": view === "grid",
         "flex flex-col gap-3": view === "list",
     });
 
