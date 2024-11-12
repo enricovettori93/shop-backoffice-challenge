@@ -9,7 +9,7 @@ interface ModalContextInterface {
 
 const initialState: ModalContextInterface = {
     modal: null,
-    showModal: (modal) => {},
+    showModal: () => {},
     removeModal: () => {}
 }
 

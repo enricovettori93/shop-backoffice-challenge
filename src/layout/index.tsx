@@ -1,4 +1,3 @@
-import React from 'react';
 import {Toaster} from "react-hot-toast";
 import Header from "../components/header";
 import {Outlet} from "react-router-dom";

@@ -1,4 +1,3 @@
-import React from 'react';
 import {Store} from "../../../../models";
 import classNames from "classnames";
 import Card from "../../../../components/card";
