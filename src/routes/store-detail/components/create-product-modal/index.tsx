@@ -19,26 +19,23 @@ const CreateProductModal = ({onCancel, onConfirm}: props) => {
         register,
         handleSubmit,
         formState: {
-            errors},
-            getValues,
-    } = useForm({
+            errors
+        },
+    } = useForm<CreateProductBody>({
         resolver: zodResolver(ProductSchema)
     });
 
-    const submitForm: SubmitHandler<CreateProductBody> = ({reviews, ...rest}) => {
-        // a fast hack for transforming a string into an array without using particular input elements / third party libraries
-        // @ts-ignore
-        const payload = {...rest, reviews: reviews.split(",").map(i => i.trim())};
+    const submitForm: SubmitHandler<CreateProductBody> = (payload) => {
         onConfirm(payload);
     }
 
     return (
         <Modal.Container closeModal={removeModal}>
-            <Modal.Title>
-                Crea un nuovo prodotto
-            </Modal.Title>
-            <Modal.Content>
-                <form onSubmit={handleSubmit(submitForm)}>
+            <form onSubmit={handleSubmit(submitForm)}>
+                <Modal.Title>
+                    Crea un nuovo prodotto
+                </Modal.Title>
+                <Modal.Content>
                     <InputWrapper error={errors.title}>
                         <label htmlFor="title">Nome</label>
                         <input id="title" type="text" {...register("title")}/>
@@ -51,28 +48,29 @@ const CreateProductModal = ({onCancel, onConfirm}: props) => {
                         <label htmlFor="employee">Impiegato</label>
                         <input id="employee" type="text" {...register("employee")}/>
                     </InputWrapper>
-                    <InputWrapper error={errors.description}>
-                        <label htmlFor="description">Descrizione</label>
-                        <textarea name="" id="" cols="1" rows="3" {...register("description")}></textarea>
-                    </InputWrapper>
                     <InputWrapper error={errors.price}>
                         <label htmlFor="price">Prezzo</label>
                         <input id="price" type="number" step="0.1" {...register("price", {valueAsNumber: true})}/>
                     </InputWrapper>
                     <InputWrapper error={errors.reviews}>
-                        <label htmlFor="reviews">Recensioni (separati da virgola)</label>
+                        <label htmlFor="reviews">Recensioni (separate da virgola)</label>
                         <input id="reviews" type="text" {...register("reviews")}/>
                     </InputWrapper>
-                </form>
-            </Modal.Content>
-            <Modal.Actions>
-                <button onClick={onCancel} className="button--info">
-                    Annulla
-                </button>
-                <button onClick={() => submitForm(getValues() as CreateProductBody)} className="button--danger">
-                    Conferma
-                </button>
-            </Modal.Actions>
+                    <InputWrapper error={errors.description}>
+                        <label htmlFor="description">Descrizione</label>
+                        <textarea id="description" cols={1} rows={3} {...register("description")}></textarea>
+                    </InputWrapper>
+
+                </Modal.Content>
+                <Modal.Actions>
+                    <button onClick={onCancel} className="button--info">
+                        Annulla
+                    </button>
+                    <button type="submit" className="button--danger">
+                        Conferma
+                    </button>
+                </Modal.Actions>
+            </form>
         </Modal.Container>
     );
 };

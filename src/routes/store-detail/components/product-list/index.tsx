@@ -1,18 +1,18 @@
 import {Product, ProductListResponse} from "../../../../models";
 import {Link, useParams} from "react-router-dom";
 import ROUTES from "../../../../routes.ts";
-import React, {useState} from "react";
+import {useState} from "react";
 import {InputWrapper} from "../../../../components/inputs";
 import classNames from "classnames";
 import Card, {CardComposition} from "../../../../components/card";
 
 interface detailProps {
-    id: Product["id"]
+    id: string
     product: Product
     className?: string
 }
 
-const Detail = ({id: productId, product, className}: detailProps) => {
+const Detail = ({id: productId, product, className = ""}: detailProps) => {
     const {storeId} = useParams();
 
     const cardClasses = classNames({
@@ -55,9 +55,12 @@ const ProductList = ({className = "", products}: listProps) => {
         "flex flex-col gap-3": view === "list",
     });
 
+    if (products.length === 0) return <h2 className="text-2xl">Non sono presenti prodotti</h2>;
+
     return (
         <div className={className}>
-            <div>
+            <div className="flex justify-between">
+                <h2 className="text-2xl mt-4">Sono presenti i seguenti prodotti</h2>
                 <InputWrapper className="min-h-0 mt-1">
                     <div className="flex flex-row gap-2">
                         <label className="order-last" htmlFor="view-type">Visualizza come lista</label>

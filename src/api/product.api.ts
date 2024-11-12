@@ -1,31 +1,30 @@
-import {Product, Store} from "../models";
 import betterFetch from "../helpers/fetch.ts";
 import {CreateProductBody, ProductDetailResponse, ProductListResponse} from "../models";
 
 interface ProductApiInterface {
-    getAll(storeId: Store["id"]): Promise<ProductListResponse>
-    getOne(storeId: Store["id"], productId: Product["id"]): Promise<ProductDetailResponse>
-    create(storeId: Store["id"], product: CreateProductBody): Promise<string>
-    delete(storeId: Store["id"], productId: Product["id"]): Promise<string>
+    getAll(storeId: string): Promise<ProductListResponse>
+    getOne(storeId: string, productId: string): Promise<ProductDetailResponse>
+    create(storeId: string, product: CreateProductBody): Promise<string>
+    delete(storeId: string, productId: string): Promise<string>
 }
 
 class ProductApi implements ProductApiInterface {
-    async getAll(storeId: Store["id"]): Promise<ProductListResponse> {
+    async getAll(storeId: string): Promise<ProductListResponse> {
         return await betterFetch<ProductListResponse>(`/api/stores/${storeId}/products`);
     }
 
-    async getOne(storeId: Store["id"], productId: Store["id"]): Promise<ProductDetailResponse> {
+    async getOne(storeId: string, productId: string): Promise<ProductDetailResponse> {
         return await betterFetch<ProductDetailResponse>(`/api/stores/${storeId}/products/${productId}`);
     }
 
-    async create(storeId: Store["id"], product: CreateProductBody): Promise<string> {
+    async create(storeId: string, product: CreateProductBody): Promise<string> {
         return await betterFetch<string>(`/api/stores/${storeId}/products`, {
             method: "POST",
             body: JSON.stringify(product),
         });
     }
 
-    async delete(storeId: Store["id"], productId: Product["id"]): Promise<string> {
+    async delete(storeId: string, productId: string): Promise<string> {
         return await betterFetch<string>(`/api/stores/${storeId}/products/${productId}`, {
             method: "DELETE",
         });

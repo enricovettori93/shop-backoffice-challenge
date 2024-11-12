@@ -1,7 +1,7 @@
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useMutation, useQuery} from "@tanstack/react-query";
 import productApi from "../../api/product.api.ts";
-import React, {useContext} from "react";
+import {useContext} from "react";
 import {ModalContext} from "../../context/modal.context.tsx";
 import DeleteProductModal from "./components/delete-product-modal";
 import toast from 'react-hot-toast';
@@ -17,11 +17,11 @@ const ProductDetail = () => {
 
     const {data, isPending, error} = useQuery({
         queryKey: ["store", storeId, "product", productId],
-        queryFn: () => productApi.getOne(storeId, productId),
+        queryFn: () => productApi.getOne(storeId!, productId!),
     });
 
     const {mutateAsync} = useMutation({
-        mutationFn: ({storeId, productId}) => productApi.delete(storeId, productId),
+        mutationFn: async ({storeId, productId}: { storeId: string, productId: string }) => productApi.delete(storeId, productId),
         onSuccess: () => {
             toast("Prodotto cancellato con successo");
             removeModal();
@@ -31,7 +31,7 @@ const ProductDetail = () => {
     });
 
     const handleDelete = async () => {
-        await mutateAsync({storeId, productId});
+        await mutateAsync({storeId: storeId!, productId: productId!});
     }
 
     const showDeleteModal = () => {

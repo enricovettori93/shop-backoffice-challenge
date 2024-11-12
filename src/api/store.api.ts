@@ -1,11 +1,11 @@
-import {StatsCategories, Store} from "../models";
+import {StatsCategories} from "../models";
 import betterFetch from "../helpers/fetch.ts";
 import {StoreDetailResponse, StoreListResponse} from "../models";
 
 interface StoreApiInterface {
     getAll(): Promise<StoreListResponse>
-    getOne(id: Store["id"]): Promise<StoreDetailResponse>
-    getStats(id: Store["id"]): Promise<StatsCategories[]>
+    getOne(id: string): Promise<StoreDetailResponse>
+    getStats(id: string): Promise<StatsCategories[]>
 }
 
 class StoreApi implements StoreApiInterface {
@@ -13,11 +13,11 @@ class StoreApi implements StoreApiInterface {
         return await betterFetch<StoreListResponse>("/api/stores");
     }
 
-    async getOne(id: Store["id"]): Promise<StoreDetailResponse> {
+    async getOne(id: string): Promise<StoreDetailResponse> {
         return await betterFetch<StoreDetailResponse>(`/api/stores/${id}`);
     }
 
-    async getStats(id: Store["id"]): Promise<StatsCategories[]> {
+    async getStats(id: string): Promise<StatsCategories[]> {
         return await betterFetch<StatsCategories[]>(`/api/stores/${id}/stats/categories`);
     }
 }
