@@ -22,7 +22,7 @@ const StoreList = () => {
     return (
         <div>
             <h2 className="text-2xl">Seleziona lo store da gestire</h2>
-            <ul>
+            <ul className="store-list">
                 {data?.map((store) => (
                     <li className="mt-2" key={store.data.name}>
                         <Link to={ROUTES.STORE_DETAIL.replace(":storeId", store.id || "")}>

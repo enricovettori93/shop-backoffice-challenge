@@ -1,0 +1,58 @@
+[
+  {
+    "category": "Computer",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Arte",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Dolci",
+    "numberOfProducts": 2
+  },
+  {
+    "category": "Informatica",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "PROVA",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Dolce al cucchiaio",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "string",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Frutta",
+    "numberOfProducts": 2
+  },
+  {
+    "category": "Alimenti",
+    "numberOfProducts": 4
+  },
+  {
+    "category": "Sole",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Biscotti",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Prodotti Sportivi",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Cellulari",
+    "numberOfProducts": 1
+  },
+  {
+    "category": "Calcio",
+    "numberOfProducts": 1
+  }
+]

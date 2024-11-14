@@ -51,6 +51,7 @@ const ProductList = ({className = "", products}: listProps) => {
     const [view, setView] = useState<view>("list");
 
     const ulClasses = classNames({
+        "store-detail-product-list": true,
         "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3": view === "grid",
         "flex flex-col gap-3": view === "list",
     });
@@ -69,13 +70,13 @@ const ProductList = ({className = "", products}: listProps) => {
                     </div>
                 </InputWrapper>
             </div>
-            <div className={ulClasses}>
+            <ul className={ulClasses}>
                 {products.map((product) => (
-                    <div key={product.id}>
+                    <li key={product.id}>
                         <Detail id={product.id} product={product.data} className={view === "grid" ? "h-80" : ""}/>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </div>
     );
 };

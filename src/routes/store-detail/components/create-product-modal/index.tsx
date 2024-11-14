@@ -31,7 +31,7 @@ const CreateProductModal = ({onCancel, onConfirm}: props) => {
 
     return (
         <Modal.Container closeModal={removeModal}>
-            <form onSubmit={handleSubmit(submitForm)}>
+            <form className="add-product-form" onSubmit={handleSubmit(submitForm)}>
                 <Modal.Title>
                     Crea un nuovo prodotto
                 </Modal.Title>

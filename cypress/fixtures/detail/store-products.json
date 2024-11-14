@@ -1,0 +1,238 @@
+[
+  {
+    "id": "BsdS6AGavVLmicapKoWa",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "Computer",
+      "title": "Delle "
+    }
+  },
+  {
+    "id": "DN9ipbIMwcSc5RERiM9F",
+    "data": {
+      "description": "",
+      "employee": "",
+      "price": 1000,
+      "category": "Arte",
+      "title": "Quadro",
+      "reviews": [
+        "Stupendo",
+        "Favoloso"
+      ]
+    }
+  },
+  {
+    "id": "FSyStHKehYAtnyx1UiAV",
+    "data": {
+      "title": "Tiramisù",
+      "category": "Dolci",
+      "price": 4.5,
+      "employee": "Marco Gialli",
+      "description": "Classico tiramisù con mascarpone e caffè.",
+      "reviews": [
+        "Il migliore che abbia mai assaggiato!",
+        "Un po' troppo caffè per i miei gusti."
+      ]
+    }
+  },
+  {
+    "id": "MOg3dC3qD4XLS5I4Vsfv",
+    "data": {
+      "description": "",
+      "employee": "Mauro",
+      "price": 100,
+      "category": "Informatica",
+      "title": "Macbook ",
+      "reviews": [
+        "Il miglior Pc al mondo",
+        "Penso sia l'acquisto migliore mai fatto"
+      ]
+    }
+  },
+  {
+    "id": "MYuY0a7wPLDSYNo5UwcN",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "PROVA",
+      "title": "Prova"
+    }
+  },
+  {
+    "id": "N1wa6nxvGwREbf9M0dc9",
+    "data": {
+      "title": "Panna cotta ai lamponi",
+      "category": "Dolce al cucchiaio",
+      "price": 5,
+      "employee": "Gianni",
+      "description": "Classica panna cotta accompagnata da una salsa ai lamponi",
+      "reviews": [
+        "Molto buona!",
+        "Buonissima!",
+        "La panna cotta ai lamponi è un dolce irresistibile che unisce la delicatezza della crema alla freschezza dei frutti. La consistenza morbida e vellutata della panna si sposa perfettamente con la leggera acidità dei lamponi, creando un contrasto armonioso. Il gusto fresco e fruttato dei lamponi esalta ogni cucchiaiata, rendendo questo dessert un piacere sublime, perfetto per ogni occasione. Un'esperienza dolce e raffinata."
+      ]
+    }
+  },
+  {
+    "id": "OE3d0miYRsupDppmN49D",
+    "data": {
+      "title": "string",
+      "category": "string",
+      "price": 0,
+      "employee": "string",
+      "description": "string",
+      "reviews": [
+        "string"
+      ]
+    }
+  },
+  {
+    "id": "OTkpDZFM483kbRvUS205",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "Frutta",
+      "title": "Mele"
+    }
+  },
+  {
+    "id": "OemjWERqC8WcJRHVEcpP",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 100,
+      "category": "Alimenti",
+      "title": "Uova"
+    }
+  },
+  {
+    "id": "QYNUPYKyE57YaPcGYN3X",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "Sole",
+      "title": "Crema"
+    }
+  },
+  {
+    "id": "SFJ8XwoCcn3cTn2ZSw4o",
+    "data": {
+      "title": "Biscotti al Burro",
+      "category": "Biscotti",
+      "price": 3.2,
+      "employee": "Anna Neri",
+      "description": "Biscotti friabili al burro.",
+      "reviews": [
+        "Molto buoni, si sciolgono in bocca.",
+        "Perfetti con il tè.",
+        "Un po' troppo dolci per i miei gusti.",
+        "Ottimi per la colazione.",
+        "Li comprerò di nuovo!"
+      ]
+    }
+  },
+  {
+    "id": "Sg6XxkmgZnD47fUSwakb",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "Prodotti Sportivi",
+      "title": "Borraccia"
+    }
+  },
+  {
+    "id": "UoT8JK7m84LsPSq7CVX6",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "Cellulari",
+      "title": "Samsung"
+    }
+  },
+  {
+    "id": "XrT9Ca6PQ7qFNOf7K9Dw",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 100,
+      "category": "Alimenti",
+      "title": "Uova"
+    }
+  },
+  {
+    "id": "YEjok3A3KqrxFcaluQkD",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "Alimenti",
+      "title": "Yogurt"
+    }
+  },
+  {
+    "id": "dzrRy4cdGI9ldiXOPXmr",
+    "data": {
+      "description": "",
+      "employee": "",
+      "price": 50,
+      "category": "Alimenti",
+      "title": "Hamburger",
+      "reviews": [
+        "Buono"
+      ]
+    }
+  },
+  {
+    "id": "ft1CFd9RMgxM4uLgCTsh",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "",
+      "price": 10,
+      "category": "Calcio",
+      "title": "Pallone"
+    }
+  },
+  {
+    "id": "xiw0DprpNkUnuBsUCN18",
+    "data": {
+      "title": "Tiramisù al Cioccolato Fondente",
+      "description": "Il nostro \"Tiramisù al Cioccolato Fondente\" è un'esperienza culinaria che unisce la tradizione italiana con un tocco di modernità. Strati di savoiardi imbevuti in un caffè espresso intenso si alternano a una crema vellutata di mascarpone, arricchita da scaglie di cioccolato fondente di alta qualità. Ogni boccone è un perfetto equilibrio tra dolcezza e amarezza, con una consistenza cremosa che si scioglie in bocca. Il dolce è rifinito con una spolverata di cacao amaro, che esalta ulteriormente i sapori ricchi e complessi del cioccolato. Perfetto per concludere un pasto in bellezza o per un momento di puro piacere.",
+      "category": "Dolci",
+      "employee": "Giovanni",
+      "price": 4.5,
+      "reviews": [
+        "Il Tiramisù al Cioccolato Fondente è stato una rivelazione! La combinazione del caffè con il cioccolato fondente è semplicemente divina. La crema di mascarpone è così leggera e soffice che ogni cucchiaiata è un piacere. Non vedo l'ora di tornare per provarlo di nuovo!",
+        "Sono un grande fan del tiramisù tradizionale, ma questo al cioccolato fondente ha superato le mie aspettative. Il sapore del cioccolato è intenso ma non sovrasta gli altri ingredienti. È un dolce perfettamente bilanciato e assolutamente delizioso.",
+        "Ho provato il Tiramisù al Cioccolato Fondente per la prima volta e sono rimasta colpita dalla qualità degli ingredienti. Il cioccolato fondente aggiunge una profondità di sapore che rende questo dolce unico. Consiglio vivamente a tutti gli amanti del cioccolato di provarlo!"
+      ]
+    }
+  },
+  {
+    "id": "yvbivRqj1OrwejpXgUVu",
+    "data": {
+      "reviews": [],
+      "description": "",
+      "employee": "Mauro",
+      "price": 10,
+      "category": "Frutta",
+      "title": "Melone"
+    }
+  }
+]

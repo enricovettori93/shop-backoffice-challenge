@@ -74,11 +74,11 @@ const StoreDetail = () => {
             </div>
             <StoreInfo store={shopDetail!}/>
             {isPendingProducts ? <ListLoader/> : <ProductList products={products!}/>}
-            <button className="button--info flex flex-row items-center mt-10" onClick={showChart} aria-label="Visualizza il grafico">
+            <button data-action="show-chart" className="button--info flex flex-row items-center mt-10" onClick={showChart} aria-label="Visualizza il grafico">
                 <FaDeezer className="mr-2"/>
                 Visualizza il grafico
             </button>
-            <button className="button--primary button-fab" onClick={showAddProductModal} aria-label="Aggiugnere un prodotto">
+            <button data-action="add-product" className="button--primary button-fab" onClick={showAddProductModal} aria-label="Aggiugnere un prodotto">
                 <FaPlus/>
             </button>
         </>

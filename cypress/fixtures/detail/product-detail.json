@@ -1,0 +1,12 @@
+{
+  "title": "Tiramisù al Cioccolato Fondente",
+  "employee": "Giovanni",
+  "price": 4.5,
+  "description": "Il nostro \"Tiramisù al Cioccolato Fondente\" è un'esperienza culinaria che unisce la tradizione italiana con un tocco di modernità. Strati di savoiardi imbevuti in un caffè espresso intenso si alternano a una crema vellutata di mascarpone, arricchita da scaglie di cioccolato fondente di alta qualità. Ogni boccone è un perfetto equilibrio tra dolcezza e amarezza, con una consistenza cremosa che si scioglie in bocca. Il dolce è rifinito con una spolverata di cacao amaro, che esalta ulteriormente i sapori ricchi e complessi del cioccolato. Perfetto per concludere un pasto in bellezza o per un momento di puro piacere.",
+  "category": "Dolci",
+  "reviews": [
+    "Il Tiramisù al Cioccolato Fondente è stato una rivelazione! La combinazione del caffè con il cioccolato fondente è semplicemente divina. La crema di mascarpone è così leggera e soffice che ogni cucchiaiata è un piacere. Non vedo l'ora di tornare per provarlo di nuovo!",
+    "Sono un grande fan del tiramisù tradizionale, ma questo al cioccolato fondente ha superato le mie aspettative. Il sapore del cioccolato è intenso ma non sovrasta gli altri ingredienti. È un dolce perfettamente bilanciato e assolutamente delizioso.",
+    "Ho provato il Tiramisù al Cioccolato Fondente per la prima volta e sono rimasta colpita dalla qualità degli ingredienti. Il cioccolato fondente aggiunge una profondità di sapore che rende questo dolce unico. Consiglio vivamente a tutti gli amanti del cioccolato di provarlo!"
+  ]
+}

@@ -77,7 +77,7 @@ const ProductDetail = () => {
 
                             <div>
                                 <p className="font-bold">{data!.reviews.length} Recensioni</p>
-                                <ul className="space-y-3 overflow-y-auto mt-2">
+                                <ul className="product-reviews space-y-3 overflow-y-auto mt-2">
                                     {data!.reviews.map((review, index) => (
                                         <li key={index} className="bg-gray-50 p-2 rounded-md shadow">
                                             <p className="text-sm font-medium text-gray-800">{review}</p>
@@ -89,7 +89,7 @@ const ProductDetail = () => {
                     </CardComposition.Content>
                 </Card>
             </div>
-            <button className="button--danger button-fab" onClick={showDeleteModal}>
+            <button data-action="delete-product" className="button--danger button-fab" onClick={showDeleteModal}>
                 <FaTrashAlt/>
             </button>
         </>
