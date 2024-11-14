@@ -29,7 +29,7 @@ Da qui verrá eseguito il webserver con vite e sará raggiungibile all'indirizzo
 É stato scelto cypress per eseguire la suite di test di tipo e2e, non avendo controllo sulla parte backend tutte le chiamate sono state mockate.
 
 Per lanciare la suite
-- creare un file cypress.config.ts partendo da cypress.config.example.ts inserendo il valore BASE_URL
+- creare un file cypress.config.ts partendo da cypress.config.example.ts inserendo i valori BASE_URL, DEFAULT_STORE (lo stesso del .env) e DEFAULT_PRODUCT (un ID di un prodotto esistente)
 - run `npm run dev` in un terminale
 - quando vite ha eseguito correttamente il webserver
 - run `npm run cy:run` in un altro terminale per eseguire cypress in modalitá headless
