@@ -21,14 +21,14 @@ Da qui verrá eseguito il webserver con vite e sará raggiungibile all'indirizzo
 É presente il Dockerfile e il compose per poter eseguire l'app in modalitá produzione con la sua build.
 É richiesta sempre la creazione del file .env come scritto sopra.
 
-- come prerequisito é aver installato docker
+- Prerequisito: avere installato docker
 - run `docker-compose build`
 - run `docker-compose up`
 
 ## Tests
-É stato scelto cypress per eseguire la suite di test di tipo e2e, non avendo controllo sulla parte backend tutte le chiamate sono state mockate.
+É stato scelto cypress per eseguire la suite di test di tipologia e2e: non avendo controllo sulla parte backend le chiamate http sono state mockate.
 
-Per lanciare la suite
+Per lanciare la suite di test:
 - creare un file cypress.config.ts partendo da cypress.config.example.ts inserendo i valori BASE_URL, DEFAULT_STORE (lo stesso del .env) e DEFAULT_PRODUCT (un ID di un prodotto esistente)
 - run `npm run dev` in un terminale
 - quando vite ha eseguito correttamente il webserver
@@ -41,5 +41,5 @@ Per lanciare la suite
   - dockerizzare la suite
   - scriverli in ts
   - togliere un pó di copia / incolla
-  - estendere la suite includendo anche il form di creazione prodotto
-- modificare il compilerOptions inserendo i path per avere tutti import assoluti
+  - estendere la suite includendo anche il form di creazione prodotto con il trigger dei validatori d'errore / payload
+- modificare il compilerOptions di ts inserendo i path per avere tutti import assoluti
